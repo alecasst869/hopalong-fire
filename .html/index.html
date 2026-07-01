@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hop-a-Long's Fire Prevention - Professional Wildfire Services</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         html{
+            scroll-behavior: smooth;
+         }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6b35;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 0;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #ffd23f;
+            margin-top: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 107, 53, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+    background:
+        linear-gradient(rgba(45, 80, 22, 0.65), rgba(45, 80, 22, 0.65)),
+        url("images/fireCrew-2013ish.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffd23f;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+
+        /* Services Section */
+        service-card ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+
+        .services {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d5016;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #ff6b35;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #4a7c59;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: #2d5016;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+         .service-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ffd23f;
+        }
+
+        .experience-highlight {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #ff6b35;
+            display: block;
+            margin: 1rem 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d5016;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #4a7c59;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d5016;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>Hop-a-Long's Fire Prevention</h1>
+                    <div class="tagline">16 Years of Wildfire Expertise</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">  
+        <div class="container">
+            <h2>Protect your home before the next fire starts!</h2>
+            <p>Using 16 seasons of frontline wildfire experience to help homeowners create defensible space, reduce wildfire risk, and prepare their properties before the season arrives.</p>
+
+           <a href="tel:5412493401" class="cta-button">Call for a Free Consultation</a>
+          <a href="mailto:info@hopalongsfireprevention.com" class="cta-button">Email Us</a>
+
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Expert Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Defensible Space Creation</h3>
+                    <ul>
+                        <li>Brush & Fuel Reduction</li>
+                         <li>Ladder Fuel Removal</li>
+                    <li>Hazard Tree Assessment & Falling</li>
+                       <li>Driveway & Access Improvements</li>
+                        <li>Home Ignition Zone Evaluation</li>
+                       <li>Emergency Fire Preparation Plans</li>
+                       </ul>
+                    <p>Expert construction of defensive fire lines using proven techniques developed over 16 years of wildfire experience. Strategic placement to maximize protection of your property.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Structure Protection</h3>
+                    <p>Comprehensive structure protection services including defensible space creation, ember-resistant modifications, and strategic fire suppression planning.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌲</div>
+                    <h3>Tree Removal & Falling</h3>
+                    <p>Professional tree removal and falling services to eliminate fire hazards. Safe removal of dead, diseased, or strategically problematic trees near structures.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚓</div>
+                    <h3>Anchor Points</h3>
+                    <p>Strategic establishment of anchor points for fire suppression efforts. Creating reliable starting points for effective fire control operations.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Ground Fuel Removal</h3>
+                    <p>Systematic removal of ground-level combustible materials including leaf litter, dead vegetation, and debris that can fuel rapidly spreading fires.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🪜</div>
+                    <h3>Ladder Fuel Prevention</h3>
+                    <p>Expert identification and removal of ladder fuels that allow ground fires to reach tree canopies, preventing dangerous crown fires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2>Proven Wildfire Experience</h2>
+            <p>When it comes to fire prevention, experience matters. Our expertise comes from real-world wildfire suppression and prevention work.</p>
+            <span class="experience-highlight">16 Years</span>
+            <p>of hands-on wildfire experience protecting communities and properties across diverse terrain and fire conditions.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us Today</h2>
+            <div class="contact-content">
+                <div>
+                    <h3 style="color: #2d5016; margin-bottom: 2rem;">Ready to Protect Your Property?</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">Don't wait until fire season arrives. Contact Hop-a-Long's Fire Prevention today for a comprehensive assessment of your property's fire risks and a customized protection plan.</p>
+                    <div style="background: #ff6b35; color: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">FREE Consultation Available</h4>
+                        <p>Get a professional assessment of your property's fire prevention needs with no obligation.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong><br>
+                            Call for immediate consultation
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            info@hopalongfire.com
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Hood River</strong><br>
+                            [Your Service Area]
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <strong>Emergency Services</strong><br>
+                            Available 24/7 during fire season
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Hop-a-Long's Fire Prevention</div>
+                <div>
+                    <p>&copy; 2025 Hop-a-Long's Fire Prevention. Professional wildfire protection services.</p>
+                </div>
+                <div>
+                    <p>Licensed • Insured • 16 Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
